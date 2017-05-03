@@ -1,6 +1,4 @@
 body {
-	margin-right: 50px;
-	margin-left: 50px;
 	background-color: $background-color;
 	font-family: 'Source Sans Pro', sans-serif;
 	font-size: 18px;
@@ -9,9 +7,11 @@ body {
 html,
 body,
 .container-fluid {
+	padding: 0;
 	height: 100%;
 }
 
-.container-fluid {
-	position: relative;
+.with-margin {
+	margin-right: 70px;
+	margin-left: 70px;
 }

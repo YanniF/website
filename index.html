@@ -5,14 +5,14 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 	<meta name="description" content="">
-    <meta name="keywords" content="">
-    <meta name="author" content="Yanni Fraga">
-    <meta name="robots" content="index, follow">
+  <meta name="keywords" content="">
+  <meta name="author" content="Yanni Fraga">
+  <meta name="robots" content="index, follow">
 
-    <meta property="og:url"  content="">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="">
-    <meta property="og:image" content="">
+  <meta property="og:url"  content="">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="">
+  <meta property="og:image" content="">
 	<meta property="og:description" content="">
 
 	<title>Yanni Fraga</title>
@@ -23,10 +23,10 @@
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-	<div class="container-fluid">
+	<div class="container-fluid with-margin">
 		<div class="row">
-			<nav class="navbar">
-				<div class="container-fluid">
+			<nav class="navbar navbar-fixed-top">
+				<div class="container-fluid with-margin">
 					<div class="navbar-header">
 						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
 							<span class="icon-bar"></span>
@@ -45,8 +45,8 @@
 				</div>
 			</nav>
 		</div>
-		<header>
-			<div class="row">
+		<div class="row">	
+			<header>
 				<div class="text-header">
 					<h2>Hello!</h2>
 					<p>I'm Yanni.</p>
@@ -54,20 +54,23 @@
 				</div>
 				<div class="avatar-space">
 					<div class="avatar">
-						<div class="eye-panel">
-							<div class="panel-area">
-				         		<div class="eye left-eye"></div>
-								<div class="eye right-eye"></div>
-							</div>
+						<div id="left-eye">
+							<div id="left-pupil"></div>
+						</div>
+						<div id="right-eye">
+							<div id="right-pupil"></div>
 						</div>
 					</div>
 				</div>
-			</div>
-		</header>
-		
-		<div class="cloud"></div>
+			</header>
+		</div>
 	</div>
-
+	<div class="container-fluid">
+		<div class="cloud"></div>
+		<div style="height:400px; background-color: white">
+			
+		</div>
+	</div>
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js"
 			integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
 			crossorigin="anonymous"></script>

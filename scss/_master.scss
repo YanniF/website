@@ -1,16 +1,29 @@
 .navbar {
+	background-color: $background-color;
+	height: 70px;
 	.navbar-header {
 		.navbar-toggle {
 
 		}
 	}
-	.navbar-collapse {
+	#myNavbar {
 		.navbar-nav {
 			li {
 				a {
 					color: $secundary-color;
 					font-size: 1.2222em;
-					line-height: 1.6666em;
+					padding-top: 30px;
+					padding-top: 30px;
+					transition: all 0.2s ease-in-out;
+
+					&:hover {
+						border-bottom: 5px solid #f7af3b;
+						background-color: $background-color;
+					}
+
+					&.active {
+						border-bottom: 5px solid #f7af3b;
+					}
 				}
 			}
 		}
@@ -18,10 +31,14 @@
 }
 
 header {
-	margin-top: 5.5555em;
-
+	@include make-md-column(12);
+	height: 100%;
+	margin-top: 15%;
+	position: fixed;
+	z-index: -1;
+	
 	.text-header {
-		@include make-md-column(8);
+		@include make-md-column(7);
 		
 		color: $secundary-color;
 		text-align: center;
@@ -37,7 +54,7 @@ header {
 
 	//avatar and eyes
 	.avatar-space {
-		@include make-md-column(4);
+		@include make-md-column(5);
 
 		position: relative;
 	}
@@ -47,35 +64,35 @@ header {
 		width: 170px;
 		background: url("../img/avatar.png");
 		background-repeat: no-repeat;
+  		background-position: center center;
 	}
 
-	.eye-panel {
-		display: table;
-		padding: 102px 45px;
+	#left-eye,
+	#right-eye{
+	    border-radius: 50%;
+	    display: block;
+	    position: absolute;
+	    width: 25px; 
+	    height: 15px;
+	    top: 104px;
 	}
 
-	.panel-area {
-		height: 15px;
-		width: 70px;
-		position: relative;
+	#left-eye{
+		left: 62px;
 	}
 
-	.eye {
+	#right-eye{
+		left: 109px;
+	}
+
+	#left-pupil,
+	#right-pupil{
+		width: 10px; 
 		height: 7px;
-	  	width: 10px;
-		background: url("../img/eye.png");
+		background: #3b434f;
+		border-radius: 40%;
+		display: block;
 		position: absolute;
-		margin-left:5px;
-	}
-
-	.left-eye {
-		left: 3px;
-		top: 4px;
-	}
-
-	.right-eye {
-		left: 48px;/* 45px + left-eye.left  */
-		top: 4px;
 	}
 	//end avatar and eyes
 }

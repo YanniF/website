@@ -1,26 +1,31 @@
-$(document).ready(function() {
-  //animate eyes 
-  var currentMousePos = { x: -1, y: -1 };
+var DrawEye = function(eyeContainer, eyePupil, speed, interval){
+  
+  var mouseX = 0, mouseY = 0, xp = 0, yp = 0;
+  var limitX = $(eyeContainer).width() - $(eyePupil).width(),
+      limitY = $(eyeContainer).height() - $(eyePupil).height(),
+      offset = $(eyeContainer).offset();
 
-  $(document).mousemove(function(event) {
-    currentMousePos.x = event.pageX;
-    currentMousePos.y = event.pageY;
+  $(window).mousemove(function(e){
+    mouseX = Math.min(e.pageX - offset.left, limitX);
+    mouseY = Math.min(e.pageY - offset.top, limitY);
 
-    var width = $(window).width();
-    var height = $(window).height();
+    if (mouseX < 0) {
+      mouseX = 0;
+    }
 
-    var leftPositionLeftEye = currentMousePos.x / (width * 3) * 20;
-    var leftPositionRightEye = leftPositionLeftEye + 45;//distance between eyes
-    var topPositionLeftEye = currentMousePos.y / height * 10;
-    var topPositionRightEye = topPositionLeftEye;
-
-    $(".left-eye").css("left", leftPositionLeftEye).css("top", topPositionLeftEye);
-    $(".right-eye").css("left", leftPositionRightEye).css("top", topPositionRightEye);
+    if (mouseY < 0) {
+      mouseY = 0;
+    }
   });
-});
 
-var offsets = eye.lens.getBoundingClientRect();
-    var left = (offsets.left - x)
-    var top = (offsets.top - y)
-    var rad = Math.atan2(top, left);
-    element.style.webkitTransform = "rotate(" + rad + "rad)"; 
+  var follower = $(eyePupil);
+  var loop = setInterval(function(){
+    xp += (mouseX - xp) / speed;
+    yp += (mouseY - yp) / speed;
+    follower.css({left:xp, top:yp});
+  }, interval);
+};
+
+//create eyes
+var eye1 = new DrawEye("#left-eye",  "#left-pupil", 8, 30);
+var eye2 = new DrawEye("#right-eye", "#right-pupil", 8, 30);
