@@ -1,0 +1,90 @@
+.navbar {
+	.navbar-header {
+		.navbar-toggle {
+
+		}
+	}
+	.navbar-collapse {
+		.navbar-nav {
+			li {
+				a {
+					color: $secundary-color;
+					font-size: 1.2222em;
+					line-height: 1.6666em;
+				}
+			}
+		}
+	}
+}
+
+header {
+	margin-top: 5.5555em;
+
+	.text-header {
+		@include make-md-column(8);
+		
+		color: $secundary-color;
+		text-align: center;
+
+		h2 {
+			font-size: 3em;
+		}
+
+		p {
+			font-size: 1.5em;
+		}
+	}
+
+	//avatar and eyes
+	.avatar-space {
+		@include make-md-column(4);
+
+		position: relative;
+	}
+
+	.avatar {
+		height: 245px;
+		width: 170px;
+		background: url("../img/avatar.png");
+		background-repeat: no-repeat;
+	}
+
+	.eye-panel {
+		display: table;
+		padding: 102px 45px;
+	}
+
+	.panel-area {
+		height: 15px;
+		width: 70px;
+		position: relative;
+	}
+
+	.eye {
+		height: 7px;
+	  	width: 10px;
+		background: url("../img/eye.png");
+		position: absolute;
+		margin-left:5px;
+	}
+
+	.left-eye {
+		left: 3px;
+		top: 4px;
+	}
+
+	.right-eye {
+		left: 48px;/* 45px + left-eye.left  */
+		top: 4px;
+	}
+	//end avatar and eyes
+}
+
+.cloud {
+	background-image: url('../img/cloud.png');
+	background-repeat: repeat-x;
+	position: absolute;
+	height: 100px;
+	width: 100%;
+	bottom: 0;
+}
