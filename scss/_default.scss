@@ -1,5 +1,6 @@
 body {
 	background-color: $background-color;
+	background: linear-gradient(to bottom, $background-color 49%,#80cde5 100%); 
 	font-family: 'Source Sans Pro', sans-serif;
 	font-size: 18px;
 }

@@ -1,5 +1,9 @@
-var DrawEye = function(eyeContainer, eyePupil, speed, interval){
+var hHeader = $('header').height();
+
+var DrawEye = function(eyeContainer, eyePupil, speed, interval) {
   
+  
+    
   var mouseX = 0, mouseY = 0, xp = 0, yp = 0;
   var limitX = $(eyeContainer).width() - $(eyePupil).width(),
       limitY = $(eyeContainer).height() - $(eyePupil).height(),
@@ -20,11 +24,16 @@ var DrawEye = function(eyeContainer, eyePupil, speed, interval){
 
   var follower = $(eyePupil);
   var loop = setInterval(function(){
-    xp += (mouseX - xp) / speed;
-    yp += (mouseY - yp) / speed;
-    follower.css({left:xp, top:yp});
+
+    //will stop the eyes if the avatar is out of sight
+    if($(window).scrollTop() < hHeader) {
+      xp += (mouseX - xp) / speed;
+      yp += (mouseY - yp) / speed;
+      follower.css({left:xp, top:yp});
+    }
   }, interval);
-};
+    
+}; //DrawEye
 
 //create eyes
 var eye1 = new DrawEye("#left-eye",  "#left-pupil", 8, 30);

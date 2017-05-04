@@ -17,12 +17,12 @@
 					transition: all 0.2s ease-in-out;
 
 					&:hover {
-						border-bottom: 5px solid #f7af3b;
+						border-bottom: 5px solid $detail-color;
 						background-color: $background-color;
 					}
 
 					&.active {
-						border-bottom: 5px solid #f7af3b;
+						border-bottom: 5px solid $detail-color;
 					}
 				}
 			}
@@ -60,11 +60,13 @@ header {
 	}
 
 	.avatar {
-		height: 245px;
-		width: 170px;
+		height: 270px;
+		width: 270px;
+		border: 5px solid $secundary-color;
+		border-radius: 50%;
 		background: url("../img/avatar.png");
 		background-repeat: no-repeat;
-  		background-position: center center;
+		background-position: center center;
 	}
 
 	#left-eye,
@@ -74,15 +76,15 @@ header {
 	    position: absolute;
 	    width: 25px; 
 	    height: 15px;
-	    top: 104px;
+	    top: 115px;
 	}
 
 	#left-eye{
-		left: 62px;
+		left: 110px;
 	}
 
 	#right-eye{
-		left: 109px;
+		left: 158px;
 	}
 
 	#left-pupil,
