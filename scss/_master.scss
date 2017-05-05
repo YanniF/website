@@ -1,6 +1,8 @@
 .navbar {
 	background-color: $background-color;
 	height: 70px;
+	z-index: 1;
+
 	.navbar-header {
 		.navbar-toggle {
 
@@ -32,6 +34,7 @@
 
 header {
 	@include make-md-column(12);
+
 	height: 100%;
 	margin-top: 15%;
 	position: fixed;
@@ -44,10 +47,12 @@ header {
 		text-align: center;
 
 		h2 {
+			margin-bottom: 0;
 			font-size: 3em;
 		}
 
 		p {
+			margin: 10px 0;
 			font-size: 1.5em;
 		}
 	}
@@ -99,6 +104,27 @@ header {
 	//end avatar and eyes
 }
 
+.balloon-wrap {
+	position: absolute;
+	bottom: -130px;
+	z-index: 2;
+}
+
+.balloon-wrap-animation {	
+	animation: up 50s linear infinite;
+}
+
+.balloon {
+	background-image: url('../img/balloon.png');
+	background-repeat: no-repeat;
+	height: 180px;
+	width: 140px;	
+}
+
+.balloon-animation {
+	animation: side 7s ease-in-out infinite alternate 0.5s;
+}
+
 .cloud {
 	background-image: url('../img/cloud.png');
 	background-repeat: repeat-x;
@@ -106,4 +132,5 @@ header {
 	height: 100px;
 	width: 100%;
 	bottom: 0;
+	z-index: 3;
 }

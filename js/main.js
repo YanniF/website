@@ -2,8 +2,6 @@ var hHeader = $('header').height();
 
 var DrawEye = function(eyeContainer, eyePupil, speed, interval) {
   
-  
-    
   var mouseX = 0, mouseY = 0, xp = 0, yp = 0;
   var limitX = $(eyeContainer).width() - $(eyePupil).width(),
       limitY = $(eyeContainer).height() - $(eyePupil).height(),
@@ -23,13 +21,22 @@ var DrawEye = function(eyeContainer, eyePupil, speed, interval) {
   });
 
   var follower = $(eyePupil);
+
   var loop = setInterval(function(){
 
     //will stop the eyes if the avatar is out of sight
     if($(window).scrollTop() < hHeader) {
+
       xp += (mouseX - xp) / speed;
       yp += (mouseY - yp) / speed;
       follower.css({left:xp, top:yp});
+
+      $('.balloon').addClass('balloon-animation');
+      $('.balloon-wrap').addClass('balloon-wrap-animation');
+    }
+    else {//stop animation when balloon is not showing, is there a better way to do that?
+      $('.balloon').removeClass('balloon-animation');
+      $('.balloon-wrap').removeClass('balloon-wrap-animation');
     }
   }, interval);
     
