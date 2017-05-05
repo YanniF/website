@@ -16,3 +16,8 @@ body,
 	margin-right: 70px;
 	margin-left: 70px;
 }
+
+.added-color {
+	background-color: $background-color;
+	z-index: 10;
+}

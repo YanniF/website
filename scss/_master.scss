@@ -1,7 +1,6 @@
 .navbar {
-	background-color: $background-color;
 	height: 70px;
-	z-index: 1;
+	transition: all .3s linear;
 
 	.navbar-header {
 		.navbar-toggle {

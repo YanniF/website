@@ -38,6 +38,13 @@ var DrawEye = function(eyeContainer, eyePupil, speed, interval) {
       $('.balloon').removeClass('balloon-animation');
       $('.balloon-wrap').removeClass('balloon-wrap-animation');
     }
+
+    if($(window).scrollTop() > $('.cloud').offset().top - 70) {
+      $('.navbar').addClass('added-color');
+    }
+    else {
+      $('.navbar').removeClass('added-color');
+    }
   }, interval);
     
 }; //DrawEye
