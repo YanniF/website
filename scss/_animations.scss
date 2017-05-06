@@ -7,6 +7,19 @@
   }
 }
 
+@keyframes up2 {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  5% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-800px);
+  }
+}
+
 @keyframes side {
  0% { 
     transform: translateX(0) skewX(-3deg);
@@ -14,4 +27,6 @@
   100% { 
     transform: translateX(20px) skewX(3deg);
   }
-} 
+}
+
+//////////tirar animacao balao 2

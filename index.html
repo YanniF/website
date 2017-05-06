@@ -22,7 +22,7 @@
 	<link rel="stylesheet" href="css/vendors/plugin.css">
 	<link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body data-spy="scroll" data-target=".navbar">
 	<div class="container-fluid with-margin" id="home">
 		<div class="row">
 			<nav class="navbar navbar-fixed-top">
@@ -36,7 +36,7 @@
 					</div>
 					<div class="collapse navbar-collapse" id="myNavbar">
 						<ul class="nav navbar-nav navbar-right">
-							<li><a class="active" href="#home">Home</a></li>
+							<li><a href="#home">Home</a></li>
 							<li><a href="#about">About</a></li>
 							<li><a href="#projects">Projects</a></li>
 							<li><a href="#contact">Contact</a></li>
@@ -70,13 +70,69 @@
 	</div>
 	<div class="container-fluid">
 		<div class="cloud"></div>
-		<div style="height:800px; background-color: white; z-index: 5; position: relative; ">
-			
-		</div>
+		<section id="about">
+			<div class="row">
+				<div class="intro">
+					<h2>About me</h2>
+					<hr>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, totam praesentium, quas soluta saepe, veniam quae reiciendis repellendus ullam maiores doloremque asperiores. Laboriosam qui error, voluptate ipsa molestias reiciendis. Quod? </p>
+				</div>
+			</div>
+		</section>
+		<section id="projects">
+			<div class="row">
+				<h2>Projects</h2>
+				<hr>
+			</div>
+		</section>
+		<div class="cloud2"></div>
+	</div>
+	<div class="container-fluid pos">
+		<section id="contact">
+			<div class="row">
+				<div class="form">
+					<h2>Contact</h2>
+					<hr>
+					<form action="">
+						<div class="form-group">
+					    <label for="name">Name:</label>
+					    <input type="text" class="form-control" name="name" id="name" placeholder="Your name..." required>
+					  </div>
+					  <div class="form-group">
+					    <label for="email">E-mail:</label>
+					    <input type="email" class="form-control" name="email" id="email" placeholder="Your e-mail..." required>
+					  </div>
+							<div class="form-group">
+							    <label for="email">Message:</label>
+							    <textarea class="form-control" name="message" id="message" rows="5" placeholder="And a lovely message..." required></textarea>
+						</div>
+						<div class="form-group">						
+							<button type="submit" class="btn btn-warning"><i class="fa fa-fw fa-paper-plane"></i> Submit</button>
+						</div>
+					</form>
+				</div>
+			</div>
+			<div class="row">
+				<div class="links with-margin">
+					<a href="https://www.linkedin.com/in/yanni-fraga/" target="_blank"><i class="fa fa-fw fa-linkedin" alt="LinkedIn" title="Remind me to update my LinkedIn page"></i></a>
+					<a href="https://github.com/YanniF" target="_blank"><i class="fa fa-fw fa-github" alt="GitHub" title="Check out my GitHub page"accesskey=""></i></a>
+					<a href="" target="_blank"><i class="fa fa-fw fa-file-pdf-o" alt="Download Resume" title="Look at my Resume"></i></a>
+					<a href="http://codepen.io/yanni_f/" target="_blank"><i class="fa fa-fw fa-codepen" alt="CodePen" title="A lot of pens"></i></a>
+					<a href="mailto:yanni_fernanda@hotmail.com?Subject=You%20are%20hired!"><i class="fa fa-fw fa-envelope" alt="E-mail" title="Send me an e-mail"></i></a>
+
+					<div class="man"></div>
+				</div>
+			</div>
+			<div class="balloon-wrap2 balloon-wrap-animation2">
+				<div class="balloon2 balloon-animation"></div>
+			</div>
+		</section>
 	</div>
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js"
 			integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
 			crossorigin="anonymous"></script>
+
+	<script src="https://use.fontawesome.com/7e5aa604b9.js"></script>
 	<script src="js/vendors/bootstrap/bootstrap.min.js"></script>
 	<script src="js/main.js"></script>
 </body>

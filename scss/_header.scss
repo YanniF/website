@@ -10,21 +10,25 @@
 	#myNavbar {
 		.navbar-nav {
 			li {
+				transition: all 0.2s ease-in-out;
+
 				a {
 					color: $secundary-color;
 					font-size: 1.2222em;
 					padding-top: 30px;
 					padding-top: 30px;
-					transition: all 0.2s ease-in-out;
 
 					&:hover {
-						border-bottom: 5px solid $detail-color;
 						background-color: $background-color;
 					}
 
-					&.active {
-						border-bottom: 5px solid $detail-color;
+					&:focus {
+						background-color: transparent;
 					}
+				}
+
+				&:hover {
+					@extend .active;
 				}
 			}
 		}

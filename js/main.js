@@ -52,3 +52,16 @@ var DrawEye = function(eyeContainer, eyePupil, speed, interval) {
 //create eyes
 var eye1 = new DrawEye("#left-eye",  "#left-pupil", 8, 30);
 var eye2 = new DrawEye("#right-eye", "#right-pupil", 8, 30);
+
+//animated scroll
+$("#myNavbar a").on('click', function(event) {
+
+  if (this.hash !== "") {
+    event.preventDefault();
+    var hash = this.hash;
+
+    $('html, body').animate({
+      scrollTop: $(hash).offset().top
+    }, 800);
+  }
+});
