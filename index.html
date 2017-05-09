@@ -46,7 +46,7 @@
 			</nav>
 		</div>
 		<div class="row">	
-			<header>
+			<header class="fixed">
 				<div class="text-header">
 					<h2>Hello!</h2>
 					<p>I'm Yanni.</p>
@@ -79,55 +79,116 @@
 				</div>
 			</div>
 		</section>
+	</div>
+	<div class="container-fluid">
 		<section id="projects">
 			<div class="row">
 				<h2>Projects</h2>
 				<hr>
 			</div>
+			<div class="row">
+				<div class="project-item">
+					<figure>
+						<img class="img-responsive" src="http://lorempixel.com/400/300/" alt="">
+						<figcaption>
+							<div class="info">
+								<h3>Nutrireeduc</h3>
+								<p>Blog da nutricionista Denise Villar. Participacao: elaboracao do tema para o WordPress. </p>
+								<p>
+									<a class="btn btn-warning" href="https://github.com/YanniF/nutrireeduc" target="_blank" title="GitHub"><i class="fa fa-fw fa-github"></i></a>
+									<a class="btn btn-warning" href="#" title="Coming Soon"><i class="fa fa-fw fa-globe"></i></a>
+								</p>
+							</div>
+						</figcaption>
+					</figure>
+				</div>
+				<div class="project-item">
+					<figure>
+						<img class="img-responsive" src="http://lorempixel.com/400/300/" alt="">
+						<figcaption>
+							<div class="info">
+								<h3>Fatec PG</h3>
+								<p>Novo site para a Fatec PG. Participacao: analise, design e desenvolvimento back-end do projeto. </p>
+								<p>
+									<a class="btn btn-warning" href="https://github.com/YanniF/fatecpg" target="_blank" title="GitHub"><i class="fa fa-fw fa-github"></i></a>
+									<a class="btn btn-warning" href="#" title="Coming Soon"><i class="fa fa-fw fa-globe"></i></a>
+								</p>
+							</div>
+						</figcaption>
+					</figure>
+				</div>
+				<div class="project-item">
+					<figure>
+						<img class="img-responsive" src="http://lorempixel.com/400/300/" alt="">
+						<figcaption>
+							<div class="info">
+								<h3>Culturando</h3>
+								<p>Site para divulgacao de eventos na Baixada Santista e regiao. Participacao: reformulacao do design e back-end. </p>
+								<p>
+									<a class="btn btn-warning" href="https://github.com/YanniF/culturando" target="_blank" title="GitHub"><i class="fa fa-fw fa-github"></i></a>
+									<a class="btn btn-warning" href="#" title="Coming Soon"><i class="fa fa-fw fa-globe"></i></a>
+								</p>
+							</div>
+						</figcaption>
+					</figure>
+				</div>
+			</div>
 		</section>
 		<div class="cloud2"></div>
 	</div>
+
 	<div class="container-fluid pos">
 		<section id="contact">
 			<div class="row">
 				<div class="form">
 					<h2>Contact</h2>
 					<hr>
-					<form action="">
+					<form id="contactForm" action="https://formspree.io/yanni_fernanda@hotmail.com" method="post">
 						<div class="form-group">
-					    <label for="name">Name:</label>
-					    <input type="text" class="form-control" name="name" id="name" placeholder="Your name..." required>
+						   <label for="name">Name:</label>
+						   <input type="text" class="form-control" name="name" id="name" placeholder="Your name..." required>
 					  </div>
 					  <div class="form-group">
-					    <label for="email">E-mail:</label>
-					    <input type="email" class="form-control" name="email" id="email" placeholder="Your e-mail..." required>
+					   	<label for="email">E-mail:</label>
+					   	<input type="email" class="form-control" name="_replyto" id="email" placeholder="Your e-mail..." required>
 					  </div>
 							<div class="form-group">
-							    <label for="email">Message:</label>
-							    <textarea class="form-control" name="message" id="message" rows="5" placeholder="And a lovely message..." required></textarea>
+								<label for="email">Message:</label>
+							   <textarea class="form-control" name="message" id="message" rows="5" placeholder="And a lovely message..." required></textarea>
 						</div>
 						<div class="form-group">						
-							<button type="submit" class="btn btn-warning"><i class="fa fa-fw fa-paper-plane"></i> Submit</button>
+							<button type="submit" value="Send" class="btn btn-warning"><i class="fa fa-fw fa-paper-plane"></i> Submit</button>
 						</div>
 					</form>
 				</div>
 			</div>
 			<div class="row">
 				<div class="links with-margin">
-					<a href="https://www.linkedin.com/in/yanni-fraga/" target="_blank"><i class="fa fa-fw fa-linkedin" alt="LinkedIn" title="Remind me to update my LinkedIn page"></i></a>
-					<a href="https://github.com/YanniF" target="_blank"><i class="fa fa-fw fa-github" alt="GitHub" title="Check out my GitHub page"accesskey=""></i></a>
-					<a href="" target="_blank"><i class="fa fa-fw fa-file-pdf-o" alt="Download Resume" title="Look at my Resume"></i></a>
-					<a href="http://codepen.io/yanni_f/" target="_blank"><i class="fa fa-fw fa-codepen" alt="CodePen" title="A lot of pens"></i></a>
-					<a href="mailto:yanni_fernanda@hotmail.com?Subject=You%20are%20hired!"><i class="fa fa-fw fa-envelope" alt="E-mail" title="Send me an e-mail"></i></a>
+					<a href="https://www.linkedin.com/in/yanni-fraga/" target="_blank">
+						<i class="fa fa-fw fa-linkedin" alt="LinkedIn" title="Remind me to update my LinkedIn page"></i>
+					</a>
+					<a href="https://github.com/YanniF" target="_blank">
+						<i class="fa fa-fw fa-github" alt="GitHub" title="Check out my GitHub page"></i>
+					</a>
+					<a href="" target="_blank">
+						<i class="fa fa-fw fa-file-pdf-o" alt="Download Resume" title="Look at my Resume"></i>
+					</a>
+					<a href="http://codepen.io/yanni_f/" target="_blank">
+						<i class="fa fa-fw fa-codepen" alt="CodePen" title="A lot of pens"></i>
+					</a>
+					<a href="mailto:yanni_fernanda@hotmail.com?Subject=You%20are%20hired!">
+						<i class="fa fa-fw fa-envelope" alt="E-mail" title="Send me an e-mail"></i>
+					</a>
 
 					<div class="man"></div>
 				</div>
 			</div>
-			<div class="balloon-wrap2 balloon-wrap-animation2">
-				<div class="balloon2 balloon-animation"></div>
+			<div class="balloon-wrap2">
+				<div class="balloon2"></div>
 			</div>
 		</section>
 	</div>
+		
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js"
 			integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
 			crossorigin="anonymous"></script>

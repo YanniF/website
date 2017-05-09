@@ -1,0 +1,79 @@
+#projects {
+	position: relative;
+	padding-bottom: 70px;
+	z-index: 4;
+
+	.project-item {
+		@include make-md-column(4);
+	}
+
+	figure {
+		margin: 0 auto;
+		position: relative;
+		overflow: hidden;
+		text-align: center;
+		margin: 10px auto;
+		cursor: pointer;
+	
+		img {
+			margin: 0 auto;
+		}
+
+		figcaption {
+			display: flex;
+			align-items: center;
+	  	justify-content: center;
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			height: auto;
+			background: rgba(19,180,236, .8);
+			color: $secundary-color;
+			opacity: 0;
+			z-index: 50;
+			transition: all 0.4s linear;
+			
+			.info {
+				padding: 10px;
+			}
+
+			h3, p {
+				position: relative;		
+				top: -40px;
+				transition: all 0.4s linear;
+			}
+
+			a {
+				margin-top: 20px;
+				font-size: 1.2222em;
+
+				&:first-child {
+					margin-right: 20px;
+				}
+			}
+		}
+
+		&:hover {
+			figcaption {
+				opacity: 1;
+			}
+
+			h3, p {
+				transform: translateY(40px);
+			}
+		}
+	}
+}
+
+.cloud2 {
+	top: 0;
+	z-index: 4;
+	background-image: url('../img/cloud.png');
+	background-repeat: repeat-x;
+	height: 100px;
+	width: 100%;
+	transform: scaleY(-1);
+}
+

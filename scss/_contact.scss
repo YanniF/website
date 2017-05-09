@@ -1,0 +1,103 @@
+.pos {
+	margin-top: 30px;
+}
+
+#contact {
+	background: linear-gradient(to top, $background-color 49%,#80cde5 100%); 
+	position: relative;
+	padding-top: 70px;
+	text-align: center;
+	color: $secundary-color;
+
+	.form {
+		@include make-md-column(12);
+
+		margin-bottom: 50px;
+	}
+
+	.form-group {
+		font-size: 1.2222em;
+		text-align: left;
+	}
+
+	.form-control {
+		font-size: 0.8181em;
+	}
+	
+	.form-group:nth-child(1) {
+		@include make-md-column(4);
+		@include make-md-column-offset(2);
+	}
+
+	.form-group:nth-child(2) {
+		@include make-md-column(4);
+		@include make-md-column-offset(2);
+		@include make-md-column-pull(2);
+	}
+
+	.form-group:nth-child(3) {
+		@include make-md-column(8);
+		@include make-md-column-offset(4);
+		@include make-md-column-pull(2);
+	}
+
+	.form-group:nth-child(4) {
+		@include make-md-column(12);
+		
+		text-align: center;
+
+		.btn {
+			padding-left: 20px;
+			padding-right: 20px;
+			font-size: 1.1111em;
+
+			i {
+				font-size: 0.7777em;
+			}
+		}
+	}
+
+	.links {
+		@include make-md-column(8);
+		@include make-md-column-offset(4);
+		@include make-md-column-pull(2);
+
+		margin-bottom: 50px;
+		display: flex;
+		justify-content: space-between;
+		
+		.fa {
+			font-size: 1.7777em;
+			transition: all 0.3s linear;
+
+			&:hover {
+				color: $secundary-color;
+			}
+		}
+	}
+}
+
+.man {
+	background-image: url('../img/man.png');
+	background-repeat: no-repeat;
+	position: absolute;
+	height: 80px;
+	width: 80px;
+	margin-left: -100px;
+	margin-bottom: -50px;//margin of .links
+	bottom: 0;
+}
+
+.balloon-wrap2 {
+	@extend .balloon-wrap;
+	margin-left: 40px;
+	bottom: 0;
+}
+
+.balloon-wrap-animation2 {
+	animation: up2 50s linear infinite;
+}
+
+.balloon2 {
+	@extend .balloon;
+}

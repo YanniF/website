@@ -4,7 +4,11 @@
 
 	.navbar-header {
 		.navbar-toggle {
-
+			border-color: $secundary-color;
+			border-width: 2px;
+		}
+		.icon-bar {
+			background-color: $secundary-color;
 		}
 	}
 	#myNavbar {
@@ -40,7 +44,7 @@ header {
 
 	height: 100%;
 	margin-top: 15%;
-	position: fixed;
+	//position: fixed;
 	z-index: -1;
 	
 	.text-header {

@@ -26,6 +26,17 @@ body,
 	}
 }
 
+#home,
+#about,
+#projects,
+#contact {
+	min-height: 100%;
+}
+
+.fixed {
+	position: fixed;
+}
+
 .with-margin {
 	margin-right: 70px;
 	margin-left: 70px;

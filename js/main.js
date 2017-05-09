@@ -30,7 +30,7 @@ var DrawEye = function(eyeContainer, eyePupil, speed, interval) {
       xp += (mouseX - xp) / speed;
       yp += (mouseY - yp) / speed;
       follower.css({left:xp, top:yp});
-
+      
       $('.balloon').addClass('balloon-animation');
       $('.balloon-wrap').addClass('balloon-wrap-animation');
     }
@@ -44,6 +44,15 @@ var DrawEye = function(eyeContainer, eyePupil, speed, interval) {
     }
     else {
       $('.navbar').removeClass('added-color');
+    }
+
+    if($(window).scrollTop() > $('#contact').offset().top - $(window).height()) {
+      $('.balloon2').addClass('balloon-animation');
+      $('.balloon-wrap2').addClass('balloon-wrap-animation2');
+    }
+    else {
+      $('.balloon2').removeClass('balloon-animation');
+      $('.balloon-wrap2').removeClass('balloon-wrap-animation2');
     }
   }, interval);
     
