@@ -1,9 +1,9 @@
 .pos {
-	margin-top: 30px;
+	margin-top: -70px;
 }
 
 #contact {
-	background: linear-gradient(to top, $background-color 49%,#80cde5 100%); 
+	background: linear-gradient(to top, $main-color 49%,#80cde5 100%); 
 	position: relative;
 	padding-top: 70px;
 	text-align: center;
@@ -92,10 +92,11 @@
 	@extend .balloon-wrap;
 	margin-left: 40px;
 	bottom: 0;
+	z-index: 0;
 }
 
 .balloon-wrap-animation2 {
-	animation: up2 50s linear infinite;
+	animation: up2 10s linear infinite;
 }
 
 .balloon2 {

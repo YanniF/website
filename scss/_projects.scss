@@ -1,8 +1,11 @@
 #projects {
-	position: relative;
-	padding-bottom: 70px;
-	z-index: 4;
-
+	padding: 70px 70px 100px 70px;
+	background-color: $secundary-color;
+	text-align: center;
+	
+	h2, hr {
+		@include make-md-column(12);
+	}
 	.project-item {
 		@include make-md-column(4);
 	}
@@ -32,7 +35,7 @@
 			background: rgba(19,180,236, .8);
 			color: $secundary-color;
 			opacity: 0;
-			z-index: 50;
+			z-index: 5;
 			transition: all 0.4s linear;
 			
 			.info {
@@ -42,12 +45,14 @@
 			h3, p {
 				position: relative;		
 				top: -40px;
-				transition: all 0.4s linear;
+				text-shadow: 0 0 10px #000;
+				transition: all 0.4s linear;				
 			}
 
 			a {
 				margin-top: 20px;
 				font-size: 1.2222em;
+				text-shadow: none;
 
 				&:first-child {
 					margin-right: 20px;
@@ -69,7 +74,7 @@
 
 .cloud2 {
 	top: 0;
-	z-index: 4;
+	z-index: 1;
 	background-image: url('../img/cloud.png');
 	background-repeat: repeat-x;
 	height: 100px;

@@ -31,10 +31,12 @@ var DrawEye = function(eyeContainer, eyePupil, speed, interval) {
       yp += (mouseY - yp) / speed;
       follower.css({left:xp, top:yp});
       
+      $('header').addClass('fixed');
       $('.balloon').addClass('balloon-animation');
       $('.balloon-wrap').addClass('balloon-wrap-animation');
     }
     else {//stop animation when balloon is not showing, is there a better way to do that?
+      $('header').removeClass('fixed');
       $('.balloon').removeClass('balloon-animation');
       $('.balloon-wrap').removeClass('balloon-wrap-animation');
     }

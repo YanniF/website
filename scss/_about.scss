@@ -1,15 +1,49 @@
-#about,
-#projects {
-	padding: 70px;
+#about {
+	padding: 70px 70px 0 70px;
 	background-color: $secundary-color;
 	text-align: center;
 }
 
 #about {
-	position: relative;
-	z-index: 5;
-
 	p {
 		font-size: 1.2222em;
+	}
+
+	.timeline {
+	  position: relative;
+	  padding: 2em 0;
+	  margin-top: 2em;
+	  margin-bottom: 2em;
+	}
+
+	.timeline::after {//vertical line	  
+	  content: '';
+	  position: absolute;
+	  top: 0;
+	  left: 18px;
+	  height: 100%;
+	  width: 4px;
+	  background: #d7e4ed;
+	}
+
+	.timeline-block {
+		//@include make-md-column(6);
+	}
+
+	.timeline-icon {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 50px;
+		height: 50px;
+		background-color: $main-color;
+		color: $secundary-color;
+		border-radius: 50%;
+	}
+
+	.big {
+		width: 70px;
+		height: 70px;
+		background-color: $detail-color;
 	}
 }
