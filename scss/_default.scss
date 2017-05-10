@@ -12,6 +12,16 @@ body,
 	height: 100%;
 }
 
+//edge
+@supports (-ms-ime-align:auto){
+  header {
+  	position: static !important;
+  }
+  .navbar {
+  	background-color: $main-color;
+  }
+}
+
 html,
 body,
 .container-fluid {

@@ -1,0 +1,32 @@
+@mixin center-middle() {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+@mixin circle() {
+	border-radius: 50%;
+}
+
+//timeline-content bubble 
+@mixin bubble-after() {
+	content: '';
+	position: absolute;
+	display: block;
+	width: 0;
+	top: 19px;
+	border-style: solid;
+	border-color: transparent $secundary-color;
+	z-index: 1;
+}
+
+@mixin bubble-before() {
+	content: '';
+	position: absolute;
+	border-style: solid;
+	border-color: transparent rgba(0,0,0,.1);
+	display: block;
+	width: 0;
+	z-index: 0;
+	top: 18px;
+}

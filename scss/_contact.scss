@@ -8,6 +8,7 @@
 	padding-top: 70px;
 	text-align: center;
 	color: $secundary-color;
+	z-index: 0;
 
 	.form {
 		@include make-md-column(12);
@@ -92,7 +93,7 @@
 	@extend .balloon-wrap;
 	margin-left: 40px;
 	bottom: 0;
-	z-index: 0;
+	z-index: 1;
 }
 
 .balloon-wrap-animation2 {
