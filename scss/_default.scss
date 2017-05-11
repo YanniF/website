@@ -20,6 +20,12 @@ body,
 @supports (-ms-ime-align:auto){
   header {
   	position: static !important;
+  	margin-top: 300px;
+
+  	@media screen and (max-width: $resolution-md) {
+
+  		//margin-top: 30%;
+  	}
   }
   .navbar {
   	background-color: $main-color;

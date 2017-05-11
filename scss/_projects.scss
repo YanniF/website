@@ -18,6 +18,7 @@
 	
 		img {
 			margin: 0 auto;
+
 		}
 
 		figcaption {
@@ -88,6 +89,10 @@
 		.project-item {
 			@include make-sm-column(12);
 		}
+		
+		figure {
+			width: 400px;
+		}
 
 		figcaption {		
 			margin: 0 auto;	
@@ -98,8 +103,7 @@
 
 @media screen and (min-width: $resolution-xs) and (max-width: $resolution-sm) {
 	
-	#projects {
-		
+	#projects {		
 		padding: 0 20px;
 
 		.project-item {
