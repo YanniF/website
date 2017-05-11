@@ -1,4 +1,4 @@
-#about {//
+#about {
 	padding: 70px 70px 0 70px;
 	background-color: $secundary-color;
 	text-align: center;
@@ -121,5 +121,56 @@
 	  p {
 	  	text-align: justify;
 	  }
+	}
+}
+
+@media screen and (max-width: $resolution-md) {
+	#about {
+		padding-left: 20px; 
+		padding-right: 20px;
+
+		.timeline {
+			@include make-sm-column(12);
+		}
+	}
+}
+
+@media screen and (min-width: $resolution-xs) and (max-width: $resolution-sm) {
+	#about {		
+		.timeline {
+			@include make-xs-column(12);	
+
+		  &:after {//vertical line	  
+			  left: 30px;
+			}
+		}
+
+		.timeline-icon,
+		.timeline-year {
+			left: 0;
+		}
+
+		.timeline-icon {
+			margin-left: -10px;
+		}
+
+		.timeline-year {
+			margin-left: -20px;
+		}
+
+		.timeline-content {
+			float: right;
+			width: 70%;
+
+			&:after {
+				left: -15px;
+				border-width: 11px 15px 11px 0;
+		  }
+
+		  &:before {
+				left: -18px;
+				border-width: 12px 16px 12px 0;
+			}
+		}
 	}
 }

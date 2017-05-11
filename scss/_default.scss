@@ -1,9 +1,13 @@
 body {
 	background-color: $main-color;
 	background: linear-gradient(to bottom, $main-color 49%, $gradient-color 100%); 
-	font-family: 'Source Sans Pro', sans-serif;
+	font-family: $font;
 	font-size: 18px;
 	position: relative;
+
+	@media screen and (max-width: $resolution-md) {
+		font-size: 16px;
+	}
 }
 
 html,
@@ -48,6 +52,11 @@ body,
 .with-margin {
 	margin-right: 70px;
 	margin-left: 70px;
+
+	@media screen and (max-width: $resolution-md) {
+		margin-right: 20px;
+		margin-left: 20px;
+	}
 }
 
 .active {

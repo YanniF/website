@@ -25,7 +25,7 @@ var DrawEye = function(eyeContainer, eyePupil, speed, interval) {
   var loop = setInterval(function(){
 
     //will stop the eyes if the avatar is out of sight
-    if($(window).scrollTop() < hHeader) {
+    if($(window).scrollTop() < $('body').height()) {
 
       xp += (mouseX - xp) / speed;
       yp += (mouseY - yp) / speed;
@@ -49,10 +49,12 @@ var DrawEye = function(eyeContainer, eyePupil, speed, interval) {
     }
 
     if($(window).scrollTop() > $('#contact').offset().top - $(window).height()) {
+      console.log('yay');
       $('.balloon2').addClass('balloon-animation');
       $('.balloon-wrap2').addClass('balloon-wrap-animation2');
     }
     else {
+      console.log('nay');
       $('.balloon2').removeClass('balloon-animation');
       $('.balloon-wrap2').removeClass('balloon-wrap-animation2');
     }
@@ -73,6 +75,6 @@ $("#myNavbar a").on('click', function(event) {
 
     $('html, body').animate({
       scrollTop: $(hash).offset().top
-    }, 800);
+    }, 900);
   }
 });

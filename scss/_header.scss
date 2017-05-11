@@ -14,7 +14,8 @@
 	#myNavbar {
 		.navbar-nav {
 			li {
-				transition: all 0.2s ease-in-out;
+				border-bottom: 5px solid transparent;
+				transition: all .3s ease-in-out;
 
 				a {
 					color: $secundary-color;
@@ -30,6 +31,10 @@
 						background-color: transparent;
 					}
 				}
+			
+				&.active {//problens with the transition
+					@extend .active;
+				}
 
 				&:hover {
 					@extend .active;
@@ -42,9 +47,8 @@
 header {
 	@include make-md-column(12);
 
-	height: 100%;
-	margin-top: 15%;
-	//position: fixed;
+	top: 50%;
+  transform: translateY(-50%);//center
 	z-index: -1;
 	
 	.text-header {
@@ -143,4 +147,52 @@ header {
 	width: 100%;
 	bottom: 0;
 	z-index: 3;
+}
+
+@media screen and (max-width: $resolution-md) {
+	
+	header {
+		@include make-sm-column(12);
+
+		.text-header {
+			@include make-sm-column(7);
+		}
+		.avatar-space {
+			@include make-sm-column(5);
+		}
+	}
+}
+
+@media screen and (min-width: $resolution-xs) and (max-width: $resolution-sm) {
+	.navbar {
+		background-color: $main-color;
+		
+		#myNavbar {// - with-margin
+			margin-left: -20px;
+			margin-right: -20px;
+
+			.navbar-nav {
+				li {
+					background-color: $main-color;
+				}
+			}
+		}
+	}
+
+	header {
+		@include make-xs-column(12);
+		margin-left: -20px;
+
+		.text-header {
+			@include make-xs-column(12);
+		}
+
+		.avatar-space {
+			display: none;
+		}
+	}
+
+	.balloon-wrap {
+		display: none;
+	}
 }

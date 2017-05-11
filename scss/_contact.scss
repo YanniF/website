@@ -103,3 +103,35 @@
 .balloon2 {
 	@extend .balloon;
 }
+
+@media screen and (max-width: $resolution-md) {
+	
+	#contact {
+
+		.form-group {
+			@include make-sm-column(12);
+		}
+	}
+	
+	.links {
+		margin-top: 20px;
+	}
+
+	.man {
+		display: none;
+	}
+
+	.balloon-wrap2 {
+		display: none;
+	}
+}
+
+@media screen and (min-width: $resolution-xs) and (max-width: $resolution-sm) {
+
+	#contact {
+		
+		.form-group {
+			@include make-xs-column(12);
+		}
+	}
+}
