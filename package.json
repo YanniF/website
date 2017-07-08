@@ -1,26 +1,26 @@
 {
   "name": "website",
   "version": "1.0.0",
-  "description": "Yanni's personal website",
+  "description": "",
   "main": "index.html",
   "scripts": {
     "test": "\"echo \\\" Error X_X\""
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/YanniF/website.git"
+    "url": ""
   },
   "keywords": [
-    "Yanni",
-    "Fraga",
-    "portfolio"
+    "",
+    "",
+    ""
   ],
   "author": "Yanni Fraga",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/YanniF/website/issues"
+    "url": ""
   },
-  "homepage": "https://github.com/YanniF/website#readme",
+  "homepage": "",
   "devDependencies": {
     "browser-sync": "^2.18.8",
     "gulp": "^3.9.1",
