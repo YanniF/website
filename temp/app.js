@@ -25,7 +25,6 @@ function criarCirculo() {
   snow.appendChild(myCircle);
 }
 
-for(let i = 0; i < (windowWidth / 6); i++) {
+for(let i = 0; i < (windowWidth / 8); i++) {
   criarCirculo(i);
-  console.log(i)
 }
