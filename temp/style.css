@@ -8,7 +8,6 @@ html {
 }
 
 @media only screen and (max-width: 53.12em) {
-
   html {
     font-size: 50%;    
   }
@@ -29,11 +28,16 @@ html {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-	width: 100vw;
-	height: 100vh;
+	width: 105vw;
+	height: 105vh;
 	background-image: url('img.jpg');
 	background-size: cover;
 	background-position: center;
+}
+
+.container > *:not(#snow) {
+  position: relative;
+  z-index: 1;
 }
 
 h1 {
@@ -43,24 +47,24 @@ h1 {
 h2 {
   font-weight: 300;
   font-size: 3rem;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
 }
 
-svg {
+#title {
   margin-top: 10rem;
   cursor: default;
 }
 
-svg text {
+#title text {
   font-size: 6.5rem;
   text-anchor: start;
 }
 
-svg line {
+#title line {
   animation: moveLeft .8s 1s ease-in forwards;
 }
 
-svg:hover line {
+#title:hover line {
   animation: moveRight .8s ease-out;
 }
 
@@ -68,18 +72,27 @@ svg:hover line {
   display: flex;
   justify-content: space-between;
   width: 300px;
-  margin-top: 4rem;
+  margin-top: 5rem; 
   font-size: 2.5rem;
 }
 
 a {
   text-decoration: none;
   color: #e4e4e4;
-  transition: color .2s;
+  transition: color .4s;
 }
 
 a:hover {
   color: #fff;
+}
+
+#snow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
 }
 
 @keyframes moveLeft {
