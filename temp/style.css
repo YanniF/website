@@ -28,30 +28,30 @@ html {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-	width: 105vw;
-	height: 105vh;
+  gap: 8rem;
+	width: 100vw;
+	height: 100vh;
 	background-image: url('img.jpg');
 	background-size: cover;
 	background-position: center;
 }
 
-.container > *:not(#snow) {
-  position: relative;
-  z-index: 1;
-}
+/*.container > *:not(#snow) {*/
+/*  position: relative;*/
+/*  z-index: 1;*/
+/*}*/
 
 h1 {
   visibility: hidden;
 }
 
-h2 {
+.job-title {
   font-weight: 300;
-  font-size: 3rem;
-  margin-top: 1.5rem;
+  font-size: 5rem;
 }
 
 #title {
-  margin-top: 10rem;
+  scale: 1.8;
   cursor: default;
 }
 
@@ -71,28 +71,22 @@ h2 {
 .links {
   display: flex;
   justify-content: space-between;
-  width: 300px;
-  margin-top: 5rem; 
-  font-size: 2.5rem;
+  width: 40rem;
+  font-size: 3.5rem;
 }
 
 a {
   text-decoration: none;
-  color: #e4e4e4;
+  color: #fff;
   transition: color .4s;
 }
 
 a:hover {
-  color: #fff;
+  color: #d9d9d9;
 }
 
-#snow {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: 0;
+.drop-shadow {
+  filter: drop-shadow(0px 0px 1px rgba(32, 5, 50, 0.77));
 }
 
 @keyframes moveLeft {
