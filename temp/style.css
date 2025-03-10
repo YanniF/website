@@ -29,11 +29,11 @@ html {
   align-items: center;
   justify-content: center;
   gap: 8rem;
-  width: 100vw;
-  height: 100vh;
-  background-image: url('img.jpg');
-  background-size: cover;
-  background-position: center;
+	width: 100vw;
+	height: 100vh;
+	background-image: url('img.jpg');
+	background-size: cover;
+	background-position: center;
 }
 
 /*.container > *:not(#snow) {*/
